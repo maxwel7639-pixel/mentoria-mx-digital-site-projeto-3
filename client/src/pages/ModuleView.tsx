@@ -3,6 +3,9 @@ import { Link, useParams } from "wouter";
 import { ChevronLeft, Play, Download, Lock } from "lucide-react";
 import { Streamdown } from "streamdown";
 
+const PERFECT_PAY_URL = "https://go.perfectpay.com.br/PPU38CQAMO7";
+const WHATSAPP_URL = "https://wa.me/5551991580526?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Mentoria%20MX%20Digital!";
+
 const modulesData: Record<string, any> = {
   "01": {
     title: "Mentalidade e Posicionamento",
@@ -27,8 +30,10 @@ Escreva em uma folha: 1) Quem eu atendo, 2) Qual problema eu resolvo, 3) Quanto 
 
 Não tenha pressa em definir tudo perfeitamente. Comece com um nicho pequeno e vá expandindo conforme ganha experiência.`,
     videos: [
-      { title: "10 Ferramentas Obrigatórias de IA para o Seu Negócio", url: "#" },
-      { title: "Estudos revelam as melhores IAs de 2025", url: "#" },
+      { title: "10 Ferramentas Obrigatórias de IA para o Seu Negócio", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" },
+      { title: "Estudos revelam as melhores IAs de 2025", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" },
+      { title: "Como Usar IA para Criar Conteúdo Profissional", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" },
+      { title: "Primeiros Passos com Inteligência Artificial", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" },
     ],
   },
   "02": {
@@ -184,6 +189,11 @@ export default function ModuleView() {
               Voltar
             </Button>
           </Link>
+          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+            <Button size="sm" className="bg-orange-600 hover:bg-orange-700 text-white">
+              WhatsApp
+            </Button>
+          </a>
           <div className="flex items-center gap-2">
             <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">
               MX
@@ -228,9 +238,11 @@ export default function ModuleView() {
                     </p>
                     <Streamdown>{module.content}</Streamdown>
                   </div>
-                  <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white">
-                    Contratar Mentoria Completa
-                  </Button>
+                  <a href={PERFECT_PAY_URL} target="_blank" rel="noopener noreferrer">
+                    <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white">
+                      Contratar Mentoria - R$ 97
+                    </Button>
+                  </a>
                 </div>
               )}
             </div>
@@ -280,9 +292,11 @@ export default function ModuleView() {
                   ></div>
                 </div>
                 <p className="text-sm text-slate-400 mb-6">Módulo 1 de 10 (Teste Grátis)</p>
-                <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white">
-                  Próximo Módulo (Pago)
-                </Button>
+                <a href={PERFECT_PAY_URL} target="_blank" rel="noopener noreferrer" className="w-full">
+                  <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white">
+                    Próximo Módulo (Pago)
+                  </Button>
+                </a>
               </div>
             )}
 
@@ -292,9 +306,11 @@ export default function ModuleView() {
               <p className="text-sm text-slate-300 mb-4">
                 Acesse todos os 10 módulos, 40+ vídeos e materiais extras.
               </p>
-              <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white">
-                Contratar Mentoria
-              </Button>
+              <a href={PERFECT_PAY_URL} target="_blank" rel="noopener noreferrer" className="w-full">
+                <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white">
+                  Contratar Mentoria - R$ 97
+                </Button>
+              </a>
             </div>
 
             {/* Materials Card */}
@@ -304,7 +320,7 @@ export default function ModuleView() {
                 Scripts, planilhas e certificados
               </p>
               <Link href="/materiais">
-                <Button variant="outline" className="w-full border-slate-600 text-slate-300 hover:bg-slate-800">
+                <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white">
                   <Download className="w-4 h-4 mr-2" />
                   Ver Materiais
                 </Button>

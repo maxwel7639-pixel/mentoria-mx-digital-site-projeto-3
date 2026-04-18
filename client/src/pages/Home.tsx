@@ -3,6 +3,9 @@ import { Link } from "wouter";
 import { BookOpen, Zap, Users, Award, Lock } from "lucide-react";
 import { useState } from "react";
 
+const PERFECT_PAY_URL = "https://go.perfectpay.com.br/PPU38CQAMO7";
+const WHATSAPP_URL = "https://wa.me/5551991580526?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Mentoria%20MX%20Digital!";
+
 export default function Home() {
   const [showLoginModal, setShowLoginModal] = useState(false);
 
@@ -99,9 +102,11 @@ export default function Home() {
                 Materiais
               </Button>
             </Link>
-            <Button size="sm" className="bg-orange-600 hover:bg-orange-700 text-white">
-              Entrar
-            </Button>
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+              <Button size="sm" className="bg-orange-600 hover:bg-orange-700 text-white">
+                Entrar
+              </Button>
+            </a>
           </nav>
         </div>
       </header>
@@ -116,12 +121,16 @@ export default function Home() {
             Aprenda a criar sites, artes com IA, copywriting e venda pelo WhatsApp. Tudo que você precisa para monetizar sua expertise e construir uma comunidade.
           </p>
           <div className="flex gap-4 justify-center">
-            <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white">
-              Começar Agora
-            </Button>
-            <Button size="lg" variant="outline" className="border-slate-600 text-white hover:bg-slate-800">
-              Ver Amostra Grátis
-            </Button>
+            <a href={PERFECT_PAY_URL} target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white">
+                Começar Agora
+              </Button>
+            </a>
+            <Link href="/modulo/01">
+              <Button size="lg" variant="outline" className="border-slate-600 text-white hover:bg-slate-800">
+                Ver Amostra Grátis
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -202,13 +211,12 @@ export default function Home() {
                   </Button>
                 </Link>
               ) : (
-                <Button
-                  onClick={() => setShowLoginModal(true)}
-                  className="w-full bg-slate-700 hover:bg-slate-600 text-white"
-                >
-                  <Lock className="w-4 h-4 mr-2" />
-                  Desbloqueado com Mentoria
-                </Button>
+                <a href={PERFECT_PAY_URL} target="_blank" rel="noopener noreferrer" className="w-full">
+                  <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white">
+                    <Lock className="w-4 h-4 mr-2" />
+                    Contratar Mentoria - R$ 97
+                  </Button>
+                </a>
               )}
             </div>
           ))}
@@ -272,16 +280,20 @@ export default function Home() {
             Acesso vitalício a todos os módulos, vídeos e materiais extras
           </p>
           <div className="flex gap-4 justify-center">
-            <Button size="lg" className="bg-white text-orange-600 hover:bg-slate-100 font-bold">
-              Contratar Mentoria
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-orange-700"
-            >
-              Ver Amostra Grátis
-            </Button>
+            <a href={PERFECT_PAY_URL} target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-white text-orange-600 hover:bg-slate-100 font-bold">
+                Contratar Mentoria - R$ 97
+              </Button>
+            </a>
+            <Link href="/modulo/01">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-orange-700"
+              >
+                Ver Amostra Grátis
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -351,7 +363,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-slate-800 pt-8 text-center text-sm">
-            <p>&copy; 2025 MX Digital. Todos os direitos reservados.</p>
+            <p>&copy; 2026 MX Digital. Todos os direitos reservados.</p>
           </div>
         </div>
       </footer>
