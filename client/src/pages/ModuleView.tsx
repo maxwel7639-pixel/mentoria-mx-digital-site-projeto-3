@@ -30,10 +30,10 @@ Escreva em uma folha: 1) Quem eu atendo, 2) Qual problema eu resolvo, 3) Quanto 
 
 Não tenha pressa em definir tudo perfeitamente. Comece com um nicho pequeno e vá expandindo conforme ganha experiência.`,
     videos: [
-      { title: "10 Ferramentas Obrigatórias de IA para o Seu Negócio", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" },
-      { title: "Estudos revelam as melhores IAs de 2025", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" },
-      { title: "Como Usar IA para Criar Conteúdo Profissional", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" },
-      { title: "Primeiros Passos com Inteligência Artificial", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" },
+      { title: "5 Ferramentas de IA que Vao Transformar Seus Negocios em 2025", url: "https://www.youtube.com/watch?v=lg_lWTI3Zqc" },
+      { title: "Como desenvolver uma MENTALIDADE EMPREENDEDORA", url: "https://www.youtube.com/watch?v=YzqTyXMROEk" },
+      { title: "5 Passos para Iniciar um Negocio Digital do Zero", url: "https://www.youtube.com/watch?v=Md4Vu9GUlkw" },
+      { title: "Como construir um negocio digital do zero em 1h15", url: "https://www.youtube.com/watch?v=4vaulBxBtNA" },
     ],
   },
   "02": {
